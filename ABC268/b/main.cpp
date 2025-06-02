@@ -11,18 +11,18 @@ int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
-    int n, x; cin >> n >> x;
-    vector<int> L(n);
-    rep(i, n) cin >> L[i];
-
-    int cnt = 0;
-    int height = 0;
-    rep(i,n+1) {
-        if (height <= x) {
-            ++cnt;
+    string s, t; cin >> s >> t;
+    int n = s.size(), m = t.size();
+    if (n <= m) {
+        rep(i, n) {
+            if (s[i] != t[i]) {
+                cout << "No" << endl;
+                return 0;
+            }
         }
-        height += L[i];
+        cout << "Yes" << endl;
+        return 0;
     }
-    cout << cnt << endl;
+    cout << "No" << endl;
     return 0;
 }

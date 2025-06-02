@@ -11,17 +11,19 @@ int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
-    int n, x; cin >> n >> x;
-    vector<int> L(n);
-    rep(i, n) cin >> L[i];
-
+    vector<string> s(12);
+    rep(i,12) cin >> s[i];
     int cnt = 0;
-    int height = 0;
-    rep(i,n+1) {
-        if (height <= x) {
-            ++cnt;
+    
+    rep(i,12) {
+        bool flag = false;
+        int l = s[i].size();
+        rep(j,l) {
+            if (s[i][j] == 'r' && !flag) {
+                ++cnt;
+                flag = true;
+            }
         }
-        height += L[i];
     }
     cout << cnt << endl;
     return 0;

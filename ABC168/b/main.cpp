@@ -11,5 +11,13 @@ int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
+    int k; cin >> k;
+    string s; cin >> s;
 
+    if (s.size() > k) {
+        cout << s.substr(0, k) << "..." << endl;
+    } else {
+        cout << s << endl;
+    }
+    return 0;
 }

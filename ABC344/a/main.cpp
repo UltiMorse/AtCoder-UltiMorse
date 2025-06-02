@@ -11,5 +11,8 @@ int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
-
+    string s; cin >> s;
+    int l = s.find("|");
+    int r = s.rfind("|");
+    cout << s.substr(0, l) + s.substr(r+1)<< endl;
 }

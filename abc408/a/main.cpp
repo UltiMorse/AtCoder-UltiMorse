@@ -11,18 +11,17 @@ int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
-    int n, x; cin >> n >> x;
-    vector<int> L(n);
-    rep(i, n) cin >> L[i];
-
-    int cnt = 0;
-    int height = 0;
-    rep(i,n+1) {
-        if (height <= x) {
-            ++cnt;
-        }
-        height += L[i];
+    int n, s; cin >> n >> s;
+    vector<int> t(n+1, 0); // 0から最初のたたきも
+    for (int i = 1; i <= n; ++i) {
+        cin >> t[i];
     }
-    cout << cnt << endl;
+    rep(i,n-1) {
+        if (t[i+1] - t[i] > s) {
+            cout << "No" << endl;
+            return 0;
+        }
+    }
+    cout << "Yes" << endl;
     return 0;
 }
