@@ -11,18 +11,19 @@ int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
-    int n; cin>>n; vector<int> a(n);
-    rep(i,n) cin>>a[i];
-
-    int cnt=1, ans=1;
-    rep(i,n-1) {
-        if (a[i] <= a[i+1]) {
-            ++cnt;
-        } else {
-            ans=max(ans,cnt);
-            cnt=1;
-        }
+    string s,t; cin >> s >> t;
+    int n = s.size();
+    if (s == t) {
+        cout << "Yes" << endl;
+        return 0;
     }
-    ans=max(ans,cnt); // 最後のやつ
-    cout<<ans<<endl;
+    rep(i, n-1) {
+        swap(s[i], s[i+1]);
+        if (s == t) {
+            cout << "Yes" << endl;
+            return 0;
+        }
+        swap(s[i], s[i+1]);
+    }
+    cout << "No" << endl;
 }
