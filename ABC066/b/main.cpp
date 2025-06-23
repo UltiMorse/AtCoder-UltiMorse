@@ -11,18 +11,13 @@ int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
-    int n, x; cin >> n >> x;
-    vector<int> L(n);
-    rep(i, n) cin >> L[i];
-
-    int cnt = 0;
-    int height = 0;
-    rep(i,n+1) {
-        if (height <= x) {
-            ++cnt;
-        }
-        height += L[i];
+    string s; cin>>s;
+    int ans = 0;
+    int n = s.size();
+    for (int i = 2; i < n; ++i) if (i%2==0) {
+        string A = s.substr(0,i/2);
+        string B = s.substr(i/2,i/2);
+        if (A==B) ans = max(ans,i);
     }
-    cout << cnt << endl;
-    return 0;
+    cout << ans << endl;
 }
