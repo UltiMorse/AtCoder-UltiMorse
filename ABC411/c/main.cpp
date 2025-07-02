@@ -11,32 +11,26 @@ int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
-    int N,Q; cin>>N>>Q;
-    vector<int> A(Q);
-    rep(i,Q) {
-        cin>>A[i];
-        --A[i];
-    }
-    vector<int> masu(N,0);
+    int N, Q;
+    cin >> N >> Q;
+    vector<int> A(N + 2, 0); // 1-indexed, 両端にダミー
     int cnt = 0;
 
-    rep(i,Q) {
-        int idx = A[i];
-        if (masu[idx]==0) {
-            masu[idx]=1;
-            if (masu[idx-1]==0) {
-                ++cnt;
-            }
+    while (Q--) {
+        int x;
+        cin >> x;
+        // 反転前の状態
+        if (A[x] == 0) {
+            // 白→黒
+            if (A[x-1] == 0 && A[x+1] == 0) cnt++; // 新しい区間
+            if (A[x-1] == 1 && A[x+1] == 1) cnt--; // 2区間が1つに
         } else {
-            masu[idx]=0;
-            if (masu[idx+1]==0) {
-                
-            }
+            // 黒→白
+            if (A[x-1] == 0 && A[x+1] == 0) cnt--; // 区間が消える
+            if (A[x-1] == 1 && A[x+1] == 1) cnt++; // 1区間が2つに
         }
-
-
-
+        A[x] = 1 - A[x];
+        cout << cnt << endl;
     }
-    cout << cnt << endl;
-    
+    return 0;
 }
