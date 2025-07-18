@@ -11,17 +11,8 @@ int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
-    int N, S;
-    cin >> N >> S;
-    vector<int> T(N);
-    int pre = 0;
-    rep(i,N) {
-        cin >> T[i];
-        if (T[i] - pre >= S + 0.5) {
-            cout << "No" << endl;
-            return 0;
-        }
-        pre = T[i];
-    }
-    cout << "Yes" << endl;
+    int A; ll N;
+    cin >> A >> N;
+
+    
 }
