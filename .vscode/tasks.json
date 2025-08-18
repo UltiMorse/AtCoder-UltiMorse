@@ -9,6 +9,7 @@
             },
             "command": "g++",
             "args": [
+                "-std=c++20",
                 "-I",
                 "${workspaceFolder}/ac-library/",
                 "-g",

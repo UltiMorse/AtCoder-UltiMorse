@@ -9,7 +9,7 @@
             "defines": [],
             "compilerPath": "/usr/bin/g++",
             "cStandard": "c17",
-            "cppStandard": "c++17",   // gnu++17 でも動作するが、AtCoder 向けには c++17 のほうが安全
+            "cppStandard": "c++20",   // ここを変更
             "intelliSenseMode": "linux-gcc-x64"
         }
     ],
