@@ -13,11 +13,11 @@ void solve() {
     int n = s.size();
     long double ans = 0;
     rep(i,n) {
-        if (s[i] != 't') {
+        if (s[i] != 't') { // 先頭のt
             continue;
         }
         for (int j = i+2; j < n; ++j) {
-            if (s[j] != 't') {
+            if (s[j] != 't') { // 末尾のt
                 continue;
             }
             int x = 0;
