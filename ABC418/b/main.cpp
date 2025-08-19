@@ -7,8 +7,40 @@ using ll = long long;
 using ull = unsigned long long;
 using ld = long double;
 
+string s;
+
+void solve() {
+    int n = s.size();
+    long double ans = 0;
+    rep(i,n) {
+        if (s[i] != 't') {
+            continue;
+        }
+        for (int j = i+2; j < n; ++j) {
+            if (s[j] != 't') {
+                continue;
+            }
+            int x = 0;
+            for (int ki = i; ki <=j; ++ki) {
+                if (s[ki] == 't') ++x;
+            }
+            int len = (j - i + 1);
+            long double item = (long double)(x-2) / (long double)(len-2); // 定義より
+            if (item > ans) {
+                ans = item;
+            }
+        }
+    }
+    cout << std::fixed << std::setprecision(17) << ans << endl;
+    return;
+}
+
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
+    cin >> s;
+    solve();
+    return 0;
 }
+// 解説見た
