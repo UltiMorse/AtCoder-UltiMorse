@@ -20,7 +20,11 @@
                 "-o",
                 "${workspaceFolder}/a.out"
             ],
-            "group": "build"
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": []
         }
     ]
 }
