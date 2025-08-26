@@ -11,4 +11,13 @@ int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
+    int K; cin >> K;
+
+    if (K % 2 == 0) {
+        cout << (K / 2) * (K / 2) << endl;
+        return 0;
+    } else {
+        cout << (K / 2) * (K / 2 + 1) << endl;
+    }
+    return 0;
 }
