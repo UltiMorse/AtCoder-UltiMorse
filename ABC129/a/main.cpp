@@ -11,4 +11,16 @@ int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
+    int P, Q, R; cin >> P >> Q >> R;
+
+    int max_n = 0;
+    max_n = max(max(P,Q), max(Q,R));
+    if (max_n == P) {
+        cout << Q + R << endl;
+    } else if (max_n == Q) {
+        cout << R + P << endl;
+    } else {
+        cout << P + Q << endl;
+    }
+    return 0;
 }

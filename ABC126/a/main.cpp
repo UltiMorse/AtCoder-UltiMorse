@@ -11,4 +11,22 @@ int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
+    int N, k; cin >> N >> k;
+    string s; cin >> s;
+    int n = s.size();
+    rep(i,n) {
+        if (i == k-1) {
+            if (s[k-1] == 'A') {
+                cout << 'a';
+            } else if (s[k-1] == 'B') {
+                cout << 'b';
+            } else if (s[k-1] == 'C') {
+                cout << 'c';
+            }
+        } else {
+            cout << s[i];
+        }
+    }
+    cout << endl;
+    return 0;
 }

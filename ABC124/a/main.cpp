@@ -11,4 +11,17 @@ int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
+    int A, B; cin >> A >> B;
+    int ans = 0;
+    rep(i,2) {    
+        if (A > B) {
+            ans += A;
+            --A;
+        } else {
+            ans += B;
+            --B;
+        }
+    }
+    cout << ans << endl;
+    return 0;
 }
