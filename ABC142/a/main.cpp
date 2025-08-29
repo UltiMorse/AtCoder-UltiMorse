@@ -11,4 +11,10 @@ int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
+    int n; cin >> n;
+    if (n % 2 != 1) {
+        cout << setprecision(10) << fixed << n / 2.0 / n;
+    } else {
+        cout << setprecision(10) << fixed << (n + 1) / 2.0 / n;
+    }
 }

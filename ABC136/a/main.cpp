@@ -11,4 +11,12 @@ int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
+    int A, B, C; cin >> A >> B >> C;
+
+    int left = A-B;
+    if (C - left < 0) {
+        cout << 0 << endl;
+        return 0;
+    }
+    cout << C - left << endl;
 }
