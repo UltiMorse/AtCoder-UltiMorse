@@ -11,4 +11,8 @@ int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
+    int N, X, T; cin >> N >> X >> T;
+
+    int kaisu = (N + X - 1) / X;
+    cout << T * kaisu << endl;
 }

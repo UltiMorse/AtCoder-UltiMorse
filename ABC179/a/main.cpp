@@ -11,4 +11,11 @@ int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
+    string s; cin >> s;
+    int n = s.size();
+    if (s[n-1] == 's') {
+        cout << s << "es" << endl;
+    } else {
+        cout << s << "s" << endl;
+    }
 }
