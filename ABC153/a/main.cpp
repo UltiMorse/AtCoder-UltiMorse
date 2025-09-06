@@ -10,5 +10,8 @@ using ld = long double;
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
-
+    
+    int h, a; cin >> h >> a;
+    cout << (h + a - 1) / a << endl;
+    return 0;
 }

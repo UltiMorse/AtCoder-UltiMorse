@@ -11,4 +11,11 @@ int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
+    int D, T, S; cin >> D >> T >> S;
+
+    if (S * T >= D) {
+        cout << "Yes" << endl;
+    } else {
+        cout << "No" << endl;
+    }
 }

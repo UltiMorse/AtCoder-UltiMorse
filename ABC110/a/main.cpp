@@ -11,4 +11,8 @@ int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
+    int A, B, C; cin >> A >> B >> C;
+
+    int max_n = max({A, B, C});
+    cout << max_n * 10 + (A + B + C - max_n) << endl;
 }

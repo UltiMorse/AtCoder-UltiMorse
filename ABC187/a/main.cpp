@@ -7,8 +7,14 @@ using ll = long long;
 using ull = unsigned long long;
 using ld = long double;
 
+int S(string n) {
+    return (n[0] - '0') + (n[1] - '0') + (n[2] - '0');
+}
+
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
+    string A, B; cin >> A >> B;
+    cout << max(S(A), S(B)) << endl;
 }

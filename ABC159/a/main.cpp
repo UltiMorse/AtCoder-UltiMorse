@@ -11,4 +11,9 @@ int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
+    int N, M; cin >> N >> M;
+
+    // (N+M) C (2) - N * M
+
+    cout << (N+M) * (N+M-1) / 2 - N * M << endl;
 }

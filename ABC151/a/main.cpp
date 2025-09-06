@@ -10,5 +10,9 @@ using ld = long double;
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
-
+    
+    char c; cin >> c;
+    c++;
+    cout << c << endl;
+    return 0;
 }

@@ -11,4 +11,12 @@ int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
+    int A, B; cin >> A >> B;
+    for (int i = 1; i <= 3; ++i) {
+        if (A * B * i % 2 != 0) {
+            cout << "Yes" << endl;
+            return 0;
+        }
+    }
+    cout << "No" << endl;
 }

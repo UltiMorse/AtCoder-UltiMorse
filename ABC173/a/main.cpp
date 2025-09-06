@@ -10,5 +10,9 @@ using ld = long double;
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
+    
+    int N; cin >> N;
 
+    int mai = (N + 1000 - 1) / 1000;
+    cout << 1000 * mai - N << endl;
 }

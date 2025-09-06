@@ -11,4 +11,10 @@ int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
+    int A, B; cin >> A >> B;
+    if ((A+B) % 2 != 1) {
+        cout << (A + B) / 2 << endl;
+    } else {
+        cout << "IMPOSSIBLE" << endl;
+    }
 }

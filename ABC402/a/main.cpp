@@ -11,4 +11,13 @@ int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
+    string s; cin >> s;
+    int n = s.size();
+
+    rep(i,n) {
+        if (s[i] >= 'A' && s[i] <= 'Z') {
+            cout << s[i];
+        }
+    }
+    cout << endl;
 }
