@@ -11,4 +11,14 @@ int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
-}
+    int n, x; cin >> n >> x;
+    vector<int> a(n);
+    rep(i,n) cin >> a[i];
+    rep(i,n) {
+        if (a[i] != x) {
+            cout << a[i] << " ";
+        }
+    }
+    cout << endl;
+    return 0;
+}   

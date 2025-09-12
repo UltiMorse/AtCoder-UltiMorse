@@ -11,4 +11,11 @@ int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
+    int A, B; cin >> A >> B;
+
+    if (6 * A >= B && B >= A) { // 最小を抑え忘れた
+        cout << "Yes" << endl;
+    } else {
+        cout << "No" << endl;
+    }
 }

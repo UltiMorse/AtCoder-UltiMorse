@@ -11,4 +11,15 @@ int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
+    int a, b, c, d;
+    cin >> a >> b >> c >> d;
+
+    int ans = -1e9;
+    for (int i = a; i <= b; ++i) {
+        for (int j = c; j <= d; ++j) {
+            int cur = i - j;
+            ans = max(ans, cur);
+        }
+    }
+    cout << ans << endl;
 }

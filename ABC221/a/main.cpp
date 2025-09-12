@@ -10,5 +10,11 @@ using ld = long double;
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
-
+    
+    int a, b; cin >> a >> b;
+    int n = a - b;
+    int res = 1;
+    rep(i,n) res *= 32;
+    cout << res << endl;
+    return 0;
 }

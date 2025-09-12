@@ -11,4 +11,11 @@ int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
+    int X; cin >> X;
+
+    if (X % 100 == 0 && X != 0) {
+        cout << "Yes" << endl;
+    } else {
+        cout << "No" << endl;
+    }
 }

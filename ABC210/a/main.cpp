@@ -11,4 +11,12 @@ int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
+    int N, A, X, Y;
+    cin >> N >> A >> X >> Y;
+
+    if (N <= A) {
+        cout << N * X << endl;
+    } else {
+        cout << A * X + (N - A) * Y << endl;
+    }
 }

@@ -11,4 +11,10 @@ int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
+    string s; cin >> s;
+    int n = s.size();
+    int num0 = 4-n;
+    rep(i,num0) cout << '0';
+    cout << s << endl;
+    return 0;
 }

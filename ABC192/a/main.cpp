@@ -11,4 +11,13 @@ int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
+    int X; cin >> X;
+    int ans = 0;
+    rep(i,100) {
+        int coin = X + i+1;
+        if (coin % 100 == 0) {
+            ans = i+1;
+        }
+    }
+    cout << ans << endl;
 }
