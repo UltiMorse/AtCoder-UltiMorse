@@ -11,24 +11,24 @@ int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
     
-    int n, m; cin >> n >> m;
-    vector<int> A(n), cnt(m);
-    
+    int N, M; cin >> N >> M;
+    vector<int> A(N);
+    rep(i, N) {
+        cin >> A[i];
+        --A[i];
+    }
+
     int ans = 0;
-    rep(i,n) {
-        if (cnt[i] == 0) {
-            cout << 0 << endl;
-            return 0;
+    while (true) {
+        vector<bool> exist(M);
+        for(int i: A) exist[i] = true;
+        bool flag = false;
+        for (bool b : exist) {
+            if (!b) flag = true;
         }
-    }
-    rep(i,n) {
-        rep(j,m) {
-            if (cnt[j] == 0) {
-                cout << ans << endl;
-                return 0;
-            }
-        }
-        --cnt[A[n-1-ans]];
+        if (flag) break;
         ++ans;
+        A.pop_back();
     }
+    cout << ans << endl;
 }
