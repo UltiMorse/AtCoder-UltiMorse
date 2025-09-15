@@ -11,9 +11,12 @@ int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
-    string s; cin >> s;
-
-    int a = s[0] - '0';
-    int b = s[2] - '0';
-    cout << a * b << endl;
+    int x, c; cin >> x >> c;
+    for (int i = 0; i <= 1e7; i += 1000) {
+        int y = i / 1000 * c;
+        if (i + y > x) {
+            cout << i - 1000 << endl;
+            return 0;
+        }
+    }
 }

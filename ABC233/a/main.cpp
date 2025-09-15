@@ -11,4 +11,11 @@ int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
+    int x, y; cin >> x >> y;
+    int nokori = y - x;
+    if (nokori <= 0) {
+        cout << 0 << endl;
+        return 0;
+    }
+    cout << (nokori + 10 - 1) / 10 << endl;
 }

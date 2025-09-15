@@ -11,5 +11,8 @@ int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
-    
+    int N, K, A; cin >> N >> K >> A;
+    int ans = (A + K - 1) % N; // A番目はA-1進んでいる
+    if (ans == 0) ans = N;
+    cout << ans << endl;
 }

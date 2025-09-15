@@ -11,4 +11,11 @@ int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
+    vector<int> a(10);
+    rep(i,10) cin >> a[i];
+    int display = 0;
+    display = a[0];
+    display = a[display];
+    display = a[display];
+    cout << display << endl;
 }

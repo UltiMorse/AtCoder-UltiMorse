@@ -11,4 +11,20 @@ int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
+    int s, t, x; cin >> s >> t >> x;
+    if (s < t) {
+        // 日付をまたがない
+        if (s <= x && x < t) {
+            cout << "Yes" << endl;
+        } else {
+            cout << "No" << endl;
+        }
+    } else {
+        // 日付をまたぐ
+        if (x >= s || x < t) { // ありえない値は制約によりない
+            cout << "Yes" << endl;
+        } else {
+            cout << "No" << endl;
+        }
+    }
 }

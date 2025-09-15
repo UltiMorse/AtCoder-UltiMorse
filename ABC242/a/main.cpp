@@ -11,4 +11,14 @@ int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
+    int A, B, C, X; cin >> A >> B >> C >> X;
+
+    if (X <= A) {
+        cout << 1 << endl;
+    } else if (X > B) {
+        cout << 0 << endl;
+    } else {
+        cout << fixed << setprecision(15) << (ld)C / (B - (A + 1) + 1) << endl;
+    }
+
 }

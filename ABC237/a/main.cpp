@@ -11,4 +11,13 @@ int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
+    ll N; cin >> N;
+
+    ll bottom = -(1LL << 31);
+    ll top = (1LL << 31);
+    if (bottom <= N && N < top) {
+        cout << "Yes" << endl;
+    } else {
+        cout << "No" << endl;
+    }
 }
