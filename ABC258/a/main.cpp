@@ -11,4 +11,11 @@ int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
+    int K; cin >> K;
+    int increment = K / 60;
+    int minute = K % 60;
+    cout << 21 + increment << ':' << setw(2) << setfill('0') << minute << endl;
 }
+// setw()は知らなかった。以前一回使ったことがある気はするが。
+// https://cpprefjp.github.io/reference/iomanip/setw.html
+// Pythonでいうf文字列

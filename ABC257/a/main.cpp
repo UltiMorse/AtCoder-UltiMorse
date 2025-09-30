@@ -11,4 +11,8 @@ int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
+    int N, X; cin >> N >> X;
+    
+    int alpha = (X + N - 1) / N;
+    cout << char('A' + alpha - 1) << endl;
 }

@@ -11,4 +11,16 @@ int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
+    int H, W, R, C; cin >> H >> W >> R >> C;
+
+    int ans = 0;
+    
+    // 横
+    if (C != 1) ++ans; 
+    if (C != W) ++ans;
+    // 縦
+    if (R != 1) ++ans;
+    if (R != H) ++ans;
+
+    cout << ans << endl;
 }

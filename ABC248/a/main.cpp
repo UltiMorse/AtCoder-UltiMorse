@@ -11,4 +11,19 @@ int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
+    string s; cin >> s;
+
+    for (int i = 0; i < 10; ++i) {
+        bool found = false;
+        for (int j = 0; j < 10; ++j) {
+            if (s[j] == i + '0') {
+                found = true;
+                break;
+            }
+        }
+        if (!found) {
+            cout << i << endl;
+            return 0;
+        }
+    }
 }
