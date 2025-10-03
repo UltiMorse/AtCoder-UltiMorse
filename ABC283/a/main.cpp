@@ -10,5 +10,9 @@ using ld = long double;
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
-
+    
+    int A, B; cin >> A >> B;
+    ll ans = 1;
+    rep(i,B) ans *= A;
+    cout << ans << endl;
 }

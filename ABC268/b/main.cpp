@@ -11,18 +11,4 @@ int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
-    string s, t; cin >> s >> t;
-    int n = s.size(), m = t.size();
-    if (n <= m) {
-        rep(i, n) {
-            if (s[i] != t[i]) {
-                cout << "No" << endl;
-                return 0;
-            }
-        }
-        cout << "Yes" << endl;
-        return 0;
-    }
-    cout << "No" << endl;
-    return 0;
 }

@@ -11,4 +11,8 @@ int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
+    string s; cin >> s;
+    int n = (s.size() + 1) / 2;
+
+    cout << s[n -1] << endl;
 }

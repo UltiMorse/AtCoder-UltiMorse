@@ -11,4 +11,7 @@ int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
+    float A, B; cin >> A >> B;
+    float ans = B / A;
+    cout << fixed << setprecision(3) << ans << endl;
 }

@@ -21,6 +21,6 @@ int main() {
     } else if (s[0] == s[2]) {
         cout << s[1] << endl;
     } else {
-        cout << -1 << endl;
+        cout << s[0] << endl;
     }
 }

@@ -11,4 +11,14 @@ int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
+    int Y; cin >> Y;
+    if (Y % 4 == 2) {
+        cout << Y << endl;
+    } else if (Y % 4 == 3) {
+        cout << Y + 3 << endl;
+    } else if (Y % 4 == 0) {
+        cout << Y + 2 << endl;
+    } else {
+        cout << Y + 1 << endl;
+    }
 }

@@ -11,4 +11,7 @@ int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
+    int X, Y, N; cin >> X >> Y >> N;
+
+    cout << min(X*N, Y*(N/3) + X*(N%3)) << endl;
 }

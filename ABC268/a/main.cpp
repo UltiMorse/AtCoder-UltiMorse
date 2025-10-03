@@ -11,8 +11,11 @@ int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
-    int l,r; cin>>l>>r;
-    string s = "atcoder";
-    cout << s.substr(l-1, r-l+1) << endl;
-    return 0;
+    vector<int> v(5); rep(i,5) cin >> v[i];
+    sort(v.begin(), v.end());
+    int variety_cnt = 1;
+    rep(i,4) {
+        if (v[i] != v[i+1]) variety_cnt++;
+    }
+    cout << variety_cnt << endl;
 }
