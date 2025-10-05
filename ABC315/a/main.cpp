@@ -11,4 +11,14 @@ int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
+    string s; cin >> s;
+    int n = s.length();
+    rep(i,n) {
+        if (s[i] == 'a' || s[i] == 'e' || s[i] == 'i' || s[i] == 'o' || s[i] == 'u') {
+            continue;
+        }
+        cout << s[i];
+    }
+    cout << endl;
+    return 0;
 }

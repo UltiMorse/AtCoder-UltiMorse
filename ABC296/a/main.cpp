@@ -11,4 +11,15 @@ int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
+    int N; cin >> N;
+    string s; cin >> s;
+
+    rep(i,N-1) {
+        if (s[i] == s[i+1]) {
+            cout << "No" << endl;
+            return 0;
+        } 
+    }
+    cout << "Yes" << endl;
+    return 0;
 }

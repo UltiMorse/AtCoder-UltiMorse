@@ -11,4 +11,19 @@ int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
+    int X, Y; cin >> X >> Y;
+
+    if (X < Y) {
+        if (Y - X <= 2) {
+            cout << "Yes" << endl;
+            return 0;
+        }
+    } else {
+        if (X - Y <= 3) {
+            cout << "Yes" << endl;
+            return 0;
+        }
+    }
+    cout << "No" << endl;
+    return 0;
 }

@@ -11,4 +11,11 @@ int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
+    string s; cin >> s;
+    int n = s.size();
+    rep(i,n-1) {
+        cout << s[i] << " ";
+    }
+    cout << s[n-1] << endl;
+    return 0;
 }

@@ -11,4 +11,21 @@ int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
+    int M, D; cin >> M >> D;
+    int y, m, d; cin >> y >> m >> d;
+
+    if (d == D) {
+        if (m == M) {
+            ++y;
+            m = 1;
+            d = 1;
+        } else {
+            ++m;
+            d = 1;
+        }
+    } else {
+        ++d; 
+    }
+    cout << y << ' ' << m << ' ' << d << endl;
+    return 0;
 }

@@ -11,4 +11,14 @@ int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
+    int N, A, B; cin >> N >> A >> B;
+    int ans = A + B;
+    rep(i,N) {
+        int c; cin >> c;
+        if (c == ans) {
+            cout << i + 1 << endl;
+            return 0;
+        }
+    }
+    return -1;
 }

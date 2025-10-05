@@ -11,4 +11,7 @@ int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
+    ll A, B; cin >> A >> B;
+
+    cout << (A + B - 1) / B << endl;
 }

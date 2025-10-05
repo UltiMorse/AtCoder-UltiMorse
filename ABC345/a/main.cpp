@@ -11,4 +11,21 @@ int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
+    string s; cin >> s;
+    int n = s.size();
+    bool ok = true;
+    if (s[0] != '<' || s[n - 1] != '>') {
+        ok = false;
+    }
+    for (int i = 1; i < n - 1; ++i) {
+       if (s[i] != '=') {
+            ok = false;
+            break;
+       } 
+    }
+    if (ok) {
+        cout << "Yes" << endl;
+    } else {
+        cout << "No" << endl;
+    }
 }

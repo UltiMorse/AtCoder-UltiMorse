@@ -11,4 +11,14 @@ int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
+    int N, M, P; cin >> N >> M >> P;
+    int ans = 0;
+    for (int i = M; i <= INT_MAX; i += P) {
+        if (i > N + P) {
+            break;
+        }
+        ++ans;
+    }
+    cout << ans - 1 << endl;
+    return 0;
 }

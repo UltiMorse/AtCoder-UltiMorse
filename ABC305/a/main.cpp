@@ -11,4 +11,8 @@ int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
+    int N; cin >> N;
+    // N / 5 に最も近い整数を出力すれば良い。
+    cout << int(round(N / 5.0)) * 5 << endl;
+    return 0;
 }

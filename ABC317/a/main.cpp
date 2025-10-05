@@ -11,4 +11,15 @@ int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
+    int n, h, x, ans; cin >> n >> h >> x;
+    vector<int> p(n);
+    rep(i,n) cin >> p[i];
+    rep(i,n) {
+        if (p[i] + h >= x) {
+            ans = i + 1;
+            break;
+        }
+    }
+    cout << ans << endl;
+    return 0;
 }
