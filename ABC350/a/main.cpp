@@ -11,4 +11,15 @@ int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
+    string s; cin >> s;
+    string num_str = s.substr(3, 3);
+    int num = stoi(num_str);
+    for (int i = 1; i < 350; ++i) {
+        if (i != 316 && i == num) {
+            cout << "Yes" << endl;
+            return 0;
+        }
+    }
+    cout << "No" << endl;
+    return 0;
 }

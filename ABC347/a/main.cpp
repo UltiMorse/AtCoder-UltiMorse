@@ -11,4 +11,16 @@ int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
+    int N, K; cin >> N >> K;
+    vector<int> A(N);
+    rep(i,N) cin >> A[i];
+    rep(i,N) {
+        if (i != N - 1 && A[i] % K == 0) {
+            cout << A[i] / K << ' ';
+        } else if (A[i] % K == 0) {
+            cout << A[i] / K << endl;
+        } else {
+            continue;
+        }
+    }
 }

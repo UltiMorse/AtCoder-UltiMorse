@@ -11,4 +11,13 @@ int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
+    int L, R; cin >> L >> R;
+    if (L == R) {
+        cout << "Invalid" << endl;
+    } else if (L == 1) {
+        cout << "Yes" << endl;
+    } else {
+        cout << "No" << endl;
+    }
+    return 0;
 }

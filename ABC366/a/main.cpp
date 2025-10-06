@@ -11,4 +11,13 @@ int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
+    int N, T, A; cin >> N >> T >> A;
+
+    int win = (N + 1) / 2;
+    if (T >= win || A >= win) {
+        cout << "Yes" << endl;
+        return 0;
+    }
+    cout << "No" << endl;
+    return 0;
 }

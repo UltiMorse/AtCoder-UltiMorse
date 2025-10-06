@@ -11,4 +11,14 @@ int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
+    int N; cin >> N;
+    int ans = 0;
+    rep(i,N) {
+        string s; cin >> s;
+        if (s[0] == 'T') {
+            ++ans;
+        }
+    }
+    cout << ans << endl;
+    return 0;
 }

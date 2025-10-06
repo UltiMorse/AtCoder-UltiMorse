@@ -11,4 +11,11 @@ int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
+    int N; cin >> N;
+    int sum_n = 0;
+    rep(i,N-1) {
+        int A; cin >> A;
+        sum_n += A;
+    }
+    cout << -1 * sum_n << endl;
 }

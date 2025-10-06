@@ -11,4 +11,16 @@ int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
+    int A_sum = 0;
+    rep(i,9) {
+        int A; cin >> A;
+        A_sum += A;
+    }
+    int B_sum = 0;
+    rep(i,8) {
+        int B; cin >> B;
+        B_sum += B;
+    }
+    cout << A_sum - B_sum +1 << endl;
+    return 0;
 }

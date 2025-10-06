@@ -11,4 +11,14 @@ int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
+    int N; cin >> N;
+
+    rep(i,N) {
+        if ((i + 1) % 3 == 0) {
+            cout << "x";
+        } else {
+            cout << "o";
+        }
+    }
+    cout << endl;
 }

@@ -11,4 +11,19 @@ int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
+    int N, X, Y, Z; cin >> N >> X >> Y >> Z;
+
+    if (X > Y) {
+        if (Z < X && Z > Y) {
+            cout << "Yes" << endl;
+            return 0;
+        }
+    } else {
+        if (Z > X && Z < Y) {
+            cout << "Yes" << endl;
+            return 0;
+        }
+    }
+    cout << "No" << endl;
+    return 0;
 }

@@ -11,4 +11,22 @@ int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
+    int A, B, C; cin >> A >> B >> C;
+    if (B < C) {
+        if (A >= B && A < C) {
+            cout << "No" << endl;
+            return 0;
+        } else {
+            cout << "Yes" << endl;
+            return 0;
+        }
+    } else {
+        if (A >= C && A < B) {
+            cout << "Yes" << endl;
+            return 0;
+        } else {
+            cout << "No" << endl;
+            return 0;
+        }
+    }
 }
