@@ -11,16 +11,12 @@ int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
-    int N, C; cin >> N >> C;
-    int pre; cin >> pre;
-    int ans = 1;
-    for (int i = 1; i < N; ++i) {
-        int t; cin >> t;
-        if (t - pre >= C) {
-            ++ans;
-            pre = t;
-        }
+    int a, b, c; cin >> a >> b >> c;
+
+    if (a == b || b == c || c == a) {
+        cout << "Yes" << endl;
+        return 0;
     }
-    cout << ans << endl;
+    cout << "No" << endl;
     return 0;
 }

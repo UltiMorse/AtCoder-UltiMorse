@@ -11,16 +11,4 @@ int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
-    int N, C; cin >> N >> C;
-    int pre; cin >> pre;
-    int ans = 1;
-    for (int i = 1; i < N; ++i) {
-        int t; cin >> t;
-        if (t - pre >= C) {
-            ++ans;
-            pre = t;
-        }
-    }
-    cout << ans << endl;
-    return 0;
 }
