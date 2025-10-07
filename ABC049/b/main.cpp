@@ -10,5 +10,20 @@ using ld = long double;
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
-
+    
+    int h, w; cin >> h >> w;
+    vector<vector<char>> c(h, vector<char>(w));
+    rep(i,h) rep(j,w) cin >> c[i][j];
+    
+    rep(i,h) {    
+        rep(k,2) {
+            rep(j,w) {
+                cout << c[i][j];
+                if (j == w - 1) {
+                    cout << endl;
+                }
+            }
+        }
+    }
+    return 0;
 }

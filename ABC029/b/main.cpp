@@ -11,4 +11,20 @@ int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
+    vector<string> s(12);
+    rep(i,12) cin >> s[i];
+    int cnt = 0;
+    
+    rep(i,12) {
+        bool flag = false;
+        int l = s[i].size();
+        rep(j,l) {
+            if (s[i][j] == 'r' && !flag) {
+                ++cnt;
+                flag = true;
+            }
+        }
+    }
+    cout << cnt << endl;
+    return 0;
 }

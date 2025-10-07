@@ -11,4 +11,15 @@ int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
+    int N, D; cin >> N >> D;
+    string s; cin >> s;
+
+    int cnt = 0;
+    rep(i,N) {
+        if (s[i] == '.') {
+            ++cnt;
+        }
+    }
+    cout << cnt + D << endl;
+    return 0;
 }
