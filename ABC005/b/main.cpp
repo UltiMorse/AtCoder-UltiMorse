@@ -11,4 +11,15 @@ int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
+    int N; cin >> N;
+
+    vector<int> T(N);
+    rep(i,N) cin >> T[i];
+
+    int ans = INT_MAX;
+    rep(i,N) {
+        ans = min(ans, T[i]);
+    }
+
+    cout << ans << endl;
 }

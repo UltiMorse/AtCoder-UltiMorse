@@ -11,4 +11,21 @@ int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
+    vector<vector<char>> c(4, vector<char>(4));
+    rep(i, 4) {
+        rep(j, 4) {
+            cin >> c[i][j];
+        }
+    }
+
+    rrep(i,4) {
+        rrep(j,4) {
+            if (j != 0) {
+                cout << c[i][j] << " ";
+            } else {
+                cout << c[i][j];
+            }
+        }
+        cout << endl;
+    }
 }
