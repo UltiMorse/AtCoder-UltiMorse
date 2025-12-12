@@ -12,12 +12,17 @@ int main() {
     cin.tie(nullptr);
 
     int N; cin >> N;
-    vector<int> P(N), Q(N);
-    rep(i,N) cin >> P[i];
-    rep(i,N) cin >> Q[i];
+    int odd_count_sum = 1;
+    int all_patern = 1;
 
+    for (int i = 0; i < N; ++i) {
+        int a; cin >> a;
+        all_patern *= 3;
+        if (a % 2 == 0) {
+            odd_count_sum *= 2;
+        }
+    }
 
+    cout << all_patern - odd_count_sum << endl;
+    return 0;
 }
-
-// next_permutationで辞書順による次の配列を生成できる。
-// https://cpprefjp.github.io/reference/algorithm/next_permutation.html
